@@ -6,7 +6,11 @@
     <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
     <script>
 $(document).ready( function () {
-    $('#table_id').DataTable();
+    $('#table_id').DataTable({
+      ordering : false,
+      paging :false,
+      scrollX : true,
+      scrollY : true});
 } );
     </script>
   </head>

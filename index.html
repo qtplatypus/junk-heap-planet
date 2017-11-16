@@ -7,7 +7,7 @@
     <script>
      
       function displayNumber (value) {
-        var exponent = ln(value)/ln(2);
+        var exponent = Math.log(value)/Math.log(2);
         if (exponent < 10) {
           return Math.floor(value);
         }

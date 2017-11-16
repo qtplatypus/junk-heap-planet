@@ -5,14 +5,30 @@
     <!-- <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.css">
     <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>-->
     <script>
+      "use strict";
 $(document).ready( function () {
+  
     //$('#table_id').DataTable({
      // ordering : false,
      // paging :false,
     //  scrollX : true,
     //  scrollY : true,
     //  searching : false,
-    });
+   // });
+  var charge = 0;
+  
+  setInterval(function () {
+    charge += 2 ** 16;
+  }, 1e3);
+  
+  setInterval(function () {
+    charge = charge / 2;
+  }, 1e3);
+  
+ // ADD DISPLAY LOGIC
+  
+  
+  
 } );
     </script>
   </head>

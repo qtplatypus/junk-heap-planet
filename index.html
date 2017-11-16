@@ -27,8 +27,7 @@ $(document).ready( function () {
   
  // ADD DISPLAY LOGIC
  window.setInterval(function () {
-   $("#charge").textContent = charge;
-   console.log(charge);
+   $("#charge")[0].textContent = charge;
  }, 1e3);
   
    console.log("Done");

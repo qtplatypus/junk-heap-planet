@@ -17,16 +17,16 @@ $(document).ready( function () {
    // });
   var charge = 0;
   
-  setInterval(function () {
+  window.setInterval(function () {
     charge += 2 ** 16;
   }, 1e3);
   
-  setInterval(function () {
+  window.setInterval(function () {
     charge = charge / 2;
   }, 1e3);
   
  // ADD DISPLAY LOGIC
- setInterval(function () {
+ window.setInterval(function () {
    $("#charge").textContent = charge;
  }, 1e3);
   

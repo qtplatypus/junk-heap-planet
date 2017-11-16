@@ -6,6 +6,25 @@
     <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>-->
     <script>
      
+      function displayNumber (value) {
+        var exponent = ln(value)/ln(2);
+        if (exponent < 10) {
+          return Math.floor(value);
+        }
+        elsif (exponent >= 10 && exponent <20) {
+          return Math.floor(value/1024) + "Ki";
+        }
+        elsif (exponent >= 20 && exponent <30) {
+          return Math.floor(value/1024**2) + "Mi";
+        }
+        elsif (exponent >= 30 && exponent <40) {
+          return Math.floor(value/1024**3) + "Gi";
+        }
+        else { // if (exponent >= 40 && exponent <50) {
+          return Math.floor(value/1024**4) + "Ti";
+        }
+      }      
+      
 $(document).ready( function () {
   
     //$('#table_id').DataTable({
@@ -27,7 +46,7 @@ $(document).ready( function () {
   
  // ADD DISPLAY LOGIC
  window.setInterval(function () {
-   $("#charge")[0].textContent = charge;
+   $("#charge")[0].textContent = displayNumber(charge);
  }, 1e3);
   
    console.log("Done");

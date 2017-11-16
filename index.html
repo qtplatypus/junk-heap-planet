@@ -11,13 +11,13 @@
         if (exponent < 10) {
           return Math.floor(value);
         }
-        elsif (exponent >= 10 && exponent <20) {
+        else if (exponent >= 10 && exponent <20) {
           return Math.floor(value/1024) + "Ki";
         }
-        elsif (exponent >= 20 && exponent <30) {
+        else if (exponent >= 20 && exponent <30) {
           return Math.floor(value/1024**2) + "Mi";
         }
-        elsif (exponent >= 30 && exponent <40) {
+        else if (exponent >= 30 && exponent <40) {
           return Math.floor(value/1024**3) + "Gi";
         }
         else { // if (exponent >= 40 && exponent <50) {

@@ -26,13 +26,16 @@ $(document).ready( function () {
   }, 1e3);
   
  // ADD DISPLAY LOGIC
-  
+ setInterval(function () {
+   $("charge").textContent = charge;
+ }, 1e3);
   
   
 } );
     </script>
   </head>
 <body>
+  <span id="charge">0</span>
   <table id="table_id" class="display">
     <thead>
       <tr>

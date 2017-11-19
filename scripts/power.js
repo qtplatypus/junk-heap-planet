@@ -1,0 +1,6 @@
+define("power", [], function () {
+    
+    return {}
+});
+
+	

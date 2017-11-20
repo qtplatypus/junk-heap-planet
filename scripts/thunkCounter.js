@@ -1,17 +1,19 @@
 "use strict";
+// This has so much in common with power.  See if you can refactor them together
 
-define("power", ["./displayNumber"], function (displayNumber) {
+define("thunkCounter", ["./displayNumber"], function (displayNumber) {
 
-    return function (gridNumber) {
-	var charge = 0;
-	var source = {};
-	var sink   = {};
-	var grid   = {
-	    "charge"  : function () {
-		return charge;
+    return function () {
+	var thunkCounter = 0;
+	var source       = {};
+	var sink         = {};
+
+	var thunk = {
+	    "thunks" : function () {
+		return thunkCounter;
 	    }
 	    ,"produce" : function (amount, sourceName) {
-		charge += amount;
+		thunkCounter += amount;
 		if (typeof source[sourceName] === 'undefined') {
 		    source[sourceName] = [];
 		}
@@ -34,18 +36,15 @@ define("power", ["./displayNumber"], function (displayNumber) {
 		    return diff;
 		}
 	    }
+	    ,"check" : function (amount) {
+		return (charge >= amount);
+	    }
 	};
 
 	window.setInterval(function () {
-	    grid.consume(charge / 2, "Leakage");
-	}, 1e3);
-
-	window.setInterval(function () {
-	    $("#charge")[0].textContent = displayNumber(charge);
+	    $("#thunks")[0].textContent = displayNumber(thunkCounter);
 	}, 1e3);
         
-	return grid;
-    }
+	return thunk;
+    }		
 });
-
-	

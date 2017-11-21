@@ -13,23 +13,10 @@ $(document).ready( function () {
      Create the manufactory
 */
 
-    define(["./power", "./thunkCounter"], function(Power, Thunkcounter) {
-	var primaryGrid   = Power(0);
+    define(["./power", "./thunkCounter", "./worldGrid"], function(Power, Thunkcounter, WorldGrid) {
+	var powerGrid     = Power(0);
 	var thunckCounter = Thunkcounter();
-
-    //$('#table_id').DataTable({
-    // ordering : false,
-    // paging :false,
-    //  scrollX : true,
-    //  scrollY : true,
-    //  searching : false,
-    // });
-    
-    /*window.setInterval(function () {
-	charge += 2 ** 16;
-    }, 1e3);*/
-        
-    // ADD DISPLAY LOGIC
+	var worldGrid     = WorldGrid();
     
 	console.log("Done");
 	

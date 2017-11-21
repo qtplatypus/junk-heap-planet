@@ -3,7 +3,10 @@ define("worldGrid", [], function () {
         var grid = [];
         
         var gridObject = {
-            "placeBuilding" : function (x, y, object) {}
+            "placeBuilding" : function (x, y, object) {
+                if (x % 2 == 0 ? !y % 2 == 0 : y % 2 == 0 ) {
+                }
+            }
             ,"addSolid" : function (x,y, solids) {}
             ,"addLiquid" : function (x,y, liquid) {}
             ,"addGas" : function (x,y, gases) {}

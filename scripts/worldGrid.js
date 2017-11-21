@@ -17,10 +17,11 @@ define("worldGrid", [], function () {
             
             ,"check" : function (x, y) {}
         }
+        
+        return gridObject;
     }
     // Add object
     // Ask if object is there
     // Display object
     
-    return gridObject;
 });

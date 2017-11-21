@@ -5,6 +5,7 @@ define("worldGrid", [], function () {
         var gridObject = {
             "placeBuilding" : function (x, y, object) {
                 if (x % 2 == 0 ? !y % 2 == 0 : y % 2 == 0 ) {
+                    return FALSE;
                 }
             }
             ,"addSolid" : function (x,y, solids) {}

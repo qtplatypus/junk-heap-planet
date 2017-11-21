@@ -21,4 +21,6 @@ define("worldGrid", [], function () {
     // Add object
     // Ask if object is there
     // Display object
+    
+    return gridObject;
 }

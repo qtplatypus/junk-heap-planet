@@ -23,4 +23,4 @@ define("worldGrid", [], function () {
     // Display object
     
     return gridObject;
-}
+});

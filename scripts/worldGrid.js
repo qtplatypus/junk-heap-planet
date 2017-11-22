@@ -3,6 +3,7 @@ define("worldGrid", [], function () {
         var grid = [];
         
         function populateGrid (x,y) {
+            // check if populated
             for (var xd = 0; xd <= x; xd++) {
                 for (var yd = 0; yd <= y; yd++) {
                     // check if populaded

@@ -11,9 +11,6 @@ define("worldGrid", [], function () {
                 }
             }
         }
-                
-            
-        }
         
         var gridObject = {
             "placeBuilding" : function (x, y, object) {

@@ -3,6 +3,16 @@ define("worldGrid", [], function () {
         var grid = [];
         
         function populateGrid (x,y) {
+            for (var xd = 0; xd <= x; xd++) {
+                for (var yd = 0; yd <= y; yd++) {
+                    // check if populaded
+                    // add defualt items to storage cells
+                    // check that power grid is set up.
+                }
+            }
+        }
+                
+            
         }
         
         var gridObject = {
@@ -25,8 +35,14 @@ define("worldGrid", [], function () {
                 
                 var powerGrid = powered(x, y);
                 
-                if (typeof(powerGrid) === nil) {
-                    return FALSE;
+                if (powerGrid.len == 0) {
+                   // check if power producer
+                }
+                else if (powerGrid.len >= 1) {
+                    // deal with bridging
+                }
+                else {
+                    // set to correct network
                 }
                 
                 

@@ -12,6 +12,14 @@ define("worldGrid", [], function () {
                     return FALSE;
                 }
                 
+                if (grid.len < x) {
+                    populateGrid(x, y);
+                }
+                
+                if (grid[x].len < y) {
+                    populateGrid(x, y);
+                }
+                
                 var powerGrid = powered(x, y);
                 
                 if (typeof(powerGrid) === nil) {

@@ -7,6 +7,18 @@ define("worldGrid", [], function () {
                 if (x % 2 == 0 ? !y % 2 == 0 : y % 2 == 0 ) {
                     return FALSE;
                 }
+                
+                if (!this.check(x, y)) {
+                    return FALSE;
+                }
+                
+                var powerGrid = powered(x, y);
+                
+                if (typeof(powerGrid) === nil) {
+                    return FALSE;
+                }
+                
+                
             }
             ,"addSolid" : function (x,y, solids) {}
             ,"addLiquid" : function (x,y, liquid) {}

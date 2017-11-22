@@ -2,6 +2,9 @@ define("worldGrid", [], function () {
     return function () {
         var grid = [];
         
+        function populate (x,y) {
+        }
+        
         var gridObject = {
             "placeBuilding" : function (x, y, object) {
                 if (x % 2 == 0 ? !y % 2 == 0 : y % 2 == 0 ) {

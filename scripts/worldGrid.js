@@ -2,7 +2,7 @@ define("worldGrid", [], function () {
     return function () {
         var grid = [];
         
-        function populate (x,y) {
+        function populateGrid (x,y) {
         }
         
         var gridObject = {

@@ -5,8 +5,16 @@ define("worldGrid", [], function () {
         function populateGrid (x,y) {
             // check if populated
             for (var xd = 0; xd <= x; xd++) {
+                if (grid[x] === nil) {
+                    grid[x] = [];
+                 }
+                
                 for (var yd = 0; yd <= y; yd++) {
                     // check if populaded
+                    if (grid[x][y] === nil) {
+                    } else {
+                    }
+                       
                     // add defualt items to storage cells
                     // check that power grid is set up.
                 }

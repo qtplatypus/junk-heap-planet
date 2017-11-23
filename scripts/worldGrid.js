@@ -34,10 +34,7 @@ define("worldGrid", [], function () {
                 var powerGrid = powered(x, y);
                 
                 if (powerGrid.len == 0) {
-                   // check if power producer
-                }
-                else if (powerGrid.len >= 1) {
-                    // deal with bridging
+                   // check if power producer if so and has no network create new network.
                 }
                 else {
                     // set to correct network

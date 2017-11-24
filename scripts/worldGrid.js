@@ -27,6 +27,8 @@ define("worldGrid", [], function () {
             }
         }
         
+        populateGrid(10,10);
+        
         var gridObject = {
             "placeBuilding" : function (x, y, object) {
                  {

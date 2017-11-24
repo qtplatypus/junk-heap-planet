@@ -1,3 +1,7 @@
+define isContainer (x,y) {
+    return ((x % 2) != (y % 2));
+}
+
 define("worldGrid", [], function () {
     return function () {
         var grid = [];
@@ -5,25 +9,27 @@ define("worldGrid", [], function () {
         function populateGrid (x,y) {
             // check if populated
             for (var xd = 0; xd <= x; xd++) {
-                if (grid[x] === nil) {
-                    grid[x] = [];
+                if (grid[xd] === undefined) {
+                    grid[xd] = [];
                  }
                 
                 for (var yd = 0; yd <= y; yd++) {
                     // check if populaded
-                    if (grid[x][y] === nil) {
-                    } else {
+                    if (grid[xd][yd] === undefined) {
+                        if isContainer(xd,yd) {
+                            grid[xd][yd] = {} // Populate default items to storage cell
+                        }
+                        else {
+                            grid[xd][yd] = {} // Empty building cell
+                        }
                     }
-                       
-                    // add defualt items to storage cells
-                    // check that power grid is set up.
                 }
             }
         }
         
         var gridObject = {
             "placeBuilding" : function (x, y, object) {
-                if (x % 2 == 0 ? !y % 2 == 0 : y % 2 == 0 ) {
+                 {
                     return FALSE;
                 }
                 

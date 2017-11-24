@@ -2,6 +2,7 @@ function isContainer (x,y) {
     return ((x % 2) != (y % 2));
 }
 
+/*
 define("worldGrid", [], function () {
     return function () {
         var grid = [];
@@ -73,3 +74,4 @@ define("worldGrid", [], function () {
     // Display object
     
 });
+*/

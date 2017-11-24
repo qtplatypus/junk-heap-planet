@@ -16,7 +16,7 @@ define("worldGrid", [], function () {
                 for (var yd = 0; yd <= y; yd++) {
                     // check if populaded
                     if (grid[xd][yd] === undefined) {
-                        if isContainer(xd,yd) {
+                        if (isContainer(xd,yd)) {
                             grid[xd][yd] = {} // Populate default items to storage cell
                         }
                         else {
